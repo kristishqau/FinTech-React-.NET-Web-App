@@ -1,15 +1,12 @@
-
-import './App.css';
-import CardList from './Components/CardList/CardList';
-import Search from './Components/Search/Search';
+import { Outlet } from 'react-router'
+import './App.css'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
-  return (
-    <div className="App">
-      <Search />
-      <CardList />
-    </div>
-  );
+  return <>
+  <Navbar />
+  <Outlet />
+  </>
 }
 
-export default App; 
+export default App
