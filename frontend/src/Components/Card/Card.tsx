@@ -17,20 +17,20 @@ const Card: React.FC<Props> = ({ id, searchResult, onStockCreate }: Props): JSX.
   const { name, symbol, currency, exchangeShortName, stockExchange } = searchResult
   return (
     <div
-      className="flex flex-col items-center justify-between w-full p-6 bg-slate-100 rounded-lg md:flex-row" // Styling for the card container
+      className="flex flex-col items-center justify-between w-full p-6 bg-yellow-50 rounded-lg shadow-md transform transition-all duration-300 hover:scale-102 hover:shadow-lg hover:bg-yellow-100 md:flex-row md:space-x-6 overflow-hidden"
       key={id} // Key for React's reconciliation process, helps with performance
       id={id} // Unique identifier for this card
     >
       {/* Link component from react-router-dom for navigating to the company page */}
       <Link 
         to={`/company/${symbol}/company-profile`} 
-        className="font-bold text-center text-black md:text-left"
+        className="font-bold text-center text-yellow-700 hover:text-yellow-800 md:text-left"
       >
         {name} ({symbol}) {/* Displaying company name and symbol */}
       </Link>
-      <p className="text-black">{currency}</p> {/* Displaying the company's currency */}
-      <p className="font-bold text-black">
-        {exchangeShortName} - {stockExchange} {/* Displaying exchange details */}
+      <p className="text-gray-700">{currency}</p> {/* Displaying the company's currency with gray text for contrast */}
+      <p className="font-bold text-gray-700">
+        {exchangeShortName} - {stockExchange} {/* Displaying exchange details with gray text */}
       </p>
       {/* AddStock component for adding the stock to user's portfolio */}
       <AddStock

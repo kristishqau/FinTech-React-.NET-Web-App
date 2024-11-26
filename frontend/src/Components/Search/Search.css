@@ -1,6 +1,5 @@
 .search-section {
 position: relative;
-background-color: #ffffff;
 padding-top: 5rem;
 }
 
@@ -32,8 +31,7 @@ padding: 0.75rem;
 border: 2px solid #ffcc00; 
 border-radius: 8px;
 font-size: 1rem;
-color: #333; 
-background-color: #fff;
+color: #333;
 transition: border-color 0.3s ease, box-shadow 0.3s ease;
 height: 2.75rem;
 width: 100%;

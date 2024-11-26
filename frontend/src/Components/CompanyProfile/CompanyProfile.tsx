@@ -5,6 +5,7 @@ import { useEffect, useState } from "react" // React hooks for managing state an
 import { getKeyMetrics } from "../../api" // Function to fetch company key metrics from an API.
 import RatioList from "../RatioList/RatioList" // Component to render a list of ratios.
 import Spinner from "../Spinner/Spinner"
+import Navbar from "../Navbar/Navbar"
 
 // Define the props interface (empty for now, but keeps the structure consistent for potential future props)
 interface Props {}
@@ -20,10 +21,9 @@ const tableConfig = [
   {
     label: "Current Ratio",
     render: (company: CompanyKeyMetrics) => 
-      formatRatio(company.currentRatioTTM), // Format the current ratio
+      formatRatio(company.currentRatioTTM),
     subTitle: "Measures the company's ability to pay short-term debt obligations",
   },
-  // Additional metrics follow the same structure
   {
     label: "Return On Equity",
     render: (company: CompanyKeyMetrics) => formatRatio(company.roeTTM),
@@ -83,7 +83,6 @@ const tableConfig = [
 const CompanyProfile = (props: Props) => {
   const ticker = useOutletContext<string>() // Get the ticker symbol from React Router context.
   const [companyData, setCompanyData] = useState<CompanyKeyMetrics>() // State to store the fetched company data.
-
   // Fetch the company metrics when the component mounts
   useEffect(() => {
     const getCompanyKeyMetrics = async () => {
@@ -92,7 +91,6 @@ const CompanyProfile = (props: Props) => {
     }
     getCompanyKeyMetrics() // Call the function.
   }, []) // Empty dependency array ensures this runs only once, on component mount.
-
   // Render the component
   return (
     <>

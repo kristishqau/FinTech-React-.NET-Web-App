@@ -14,7 +14,7 @@ interface Props {
 // Functional component that receives props of type Props
 const Search: React.FC<Props> = ({ onSearchSubmit, search, handleSearchChange }: Props) : JSX.Element => {
   return (
-    <section className="search-section">
+    <section className="search-section bg-gradient-to-r from-yellow-100 to-yellow-200">
       <div className="search-wrapper">
         <form
           className="search-form"

@@ -11,11 +11,11 @@ interface Props {
 // The ListStock component definition
 const ListStock = ({ stockValues, onStockDelete }: Props) => {
   return (
-    <section id="stock" className="stock-section">
+    <section id="stock" className="stock-section bg-gradient-to-r from-yellow-100 to-yellow-200">
     {/* Title */}
     <h2 className="stock-title">My Stock</h2>
     {/* Container for the stock items */}
-    <div className="stock-container">
+    <div className="relative flex flex-wrap items-center justify-center max-w-7xl mx-auto p-6 gap-8 md:p-4 md:gap-6">
       {/* Conditionally render stock items or an empty message */}
       {stockValues.length > 0 ? (
         // Map over stockValues to render individual CardStock components

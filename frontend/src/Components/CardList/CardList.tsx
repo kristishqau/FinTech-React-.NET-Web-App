@@ -12,14 +12,12 @@ interface Props {
 const CardList: React.FC<Props> = ({ searchResults, onStockCreate }: Props): JSX.Element => {
   return (
     <>
-      {/* Conditionally render the "No results!" message */}
       {searchResults.length === 0 ? (
-        <p className="mt-8 text-2xl font-semibold text-center text-yellow-500 p-4 border-2 border-yellow-500 rounded-lg transition-transform duration-300 ease-in-out">
+        <p className="mt-8 text-2xl font-semibold text-center text-yellow-500 p-4 rounded-lg transition-transform duration-300 ease-in-out">
           No results!
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4 max-w-7xl mx-auto bg-white rounded-lg shadow-lg">
-          {/* Loop through searchResults and render a Card component for each */}
+        <div>
           {searchResults.map((result) => (
             <Card 
               id={result.symbol} // Using the company's symbol as a stable identifier for the Card component

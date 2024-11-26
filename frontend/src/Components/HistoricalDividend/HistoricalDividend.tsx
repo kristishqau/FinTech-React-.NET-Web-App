@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom"
 import { Dividend } from "../../company"
 import LineChart from "../LineChart/LineChart"
 import { getHistoricalDividend } from "../../api"
+import Spinner from "../Spinner/Spinner"
 
 type Props = {}
 
@@ -28,7 +29,7 @@ const HistoricalDividend = (props: Props) => {
       {dividend && dividend.length > 0 && dividend !== undefined ? (
         <LineChart data={dividend} xAxis="label" dataKey="dividend" />
       ) : (
-        <h1 className="ml-3">Company does not have a dividend!</h1>
+        <Spinner />
       )}
     </>
   )

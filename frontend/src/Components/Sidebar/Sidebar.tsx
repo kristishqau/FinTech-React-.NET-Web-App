@@ -1,54 +1,59 @@
-import { Link } from 'react-router-dom' // Import Link for navigation
-import { FaHome, FaMoneyBill, FaTable } from 'react-icons/fa' // Import FaHome for the home icon
+import { Link } from 'react-router-dom'
+import { FaHome, FaMoneyBill, FaTable } from 'react-icons/fa'
 import { SlGraph } from "react-icons/sl"
 import { FaTableCells } from "react-icons/fa6"
 
-// Sidebar functional component
 const Sidebar = () => {
   return (
-    <nav className="block py-4 px-6 top-0 bottom-0 w-64 bg-white shadow-xl left-0 absolute flex-row flex-nowrap md:z-10 z-9999 transition-all duration-300 ease-in-out transform md:translate-x-0 -translate-x-full">
-      {/* Button to toggle the sidebar on smaller screens */}
-      <button className="md:hidden flex items-center justify-center cursor-pointer text-blueGray-700 w-6 h-10 border-l-0 border-r border-t border-b border-solid border-blueGray-100 text-xl leading-none bg-white rounded-r border border-solid border-transparent absolute top-1/2 -right-24-px focus:outline-none z-9998">
-        <i className="fas fa-ellipsis-v"></i>
-      </button>
-      {/* Sidebar content wrapper */}
-      <div className="flex-col min-h-full px-0 flex flex-wrap items-center justify-between w-full mx-auto overflow-y-auto overflow-x-hidden">
-        <div className="flex bg-white flex-col items-stretch opacity-100 relative mt-4 overflow-y-auto overflow-x-hidden h-auto z-40 items-center flex-1 rounded w-full">
-          {/* Navigation links */}
-          <div className="md:flex-col md:min-w-full flex flex-col list-none">
-            <Link 
+    <nav className="fixed top-24 bottom-0 left-0 w-64 bg-gradient-to-r from-yellow-100 to-yellow-200 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform translate-x-0 md:translate-x-0 overflow-y-auto z-10">
+      <div className="px-4 py-6">
+        <ul className="space-y-12">
+          <li>
+            <Link
               to="company-profile"
-              className="flex md:min-w-full text-blueGrey-500 text-medium uppercase font-bold block pt--1 pb-4 no-underline">
-              <FaHome /> {/* Home icon */}
-              <h6 className='ml-3'>Company Profile</h6>
+              className="flex items-center text-yellow-800 hover:text-yellow-600 font-semibold uppercase text-sm transition duration-200 bg-yellow-200 p-4 rounded-lg hover:bg-yellow-300"
+            >
+              <FaHome className="text-xl" />
+              <span className="ml-3">Company Profile</span>
             </Link>
-            <Link 
+          </li>
+          <li>
+            <Link
               to="income-statement"
-              className="flex md:min-w-full text-blueGrey-500 text-medium uppercase font-bold block pt--1 pb-4 no-underline">
-              <FaTable />
-              <h6 className='ml-3'>Income Statement</h6>
+              className="flex items-center text-yellow-800 hover:text-yellow-600 font-semibold uppercase text-sm transition duration-200 bg-yellow-200 p-4 rounded-lg hover:bg-yellow-300"
+            >
+              <FaTable className="text-xl" />
+              <span className="ml-3">Income Statement</span>
             </Link>
-            <Link 
+          </li>
+          <li>
+            <Link
               to="balance-sheet"
-              className="flex md:min-w-full text-blueGrey-500 text-medium uppercase font-bold block pt--1 pb-4 no-underline">
-              <FaTableCells />
-              <h6 className='ml-3'>Balance Sheet</h6>
+              className="flex items-center text-yellow-800 hover:text-yellow-600 font-semibold uppercase text-sm transition duration-200 bg-yellow-200 p-4 rounded-lg hover:bg-yellow-300"
+            >
+              <FaTableCells className="text-xl" />
+              <span className="ml-3">Balance Sheet</span>
             </Link>
-            <Link 
+          </li>
+          <li>
+            <Link
               to="cashflow-statement"
-              className="flex md:min-w-full text-blueGrey-500 text-medium uppercase font-bold block pt--1 pb-4 no-underline">
-              <FaMoneyBill />
-              <h6 className='ml-3'>CashFlow Statement</h6>
+              className="flex items-center text-yellow-800 hover:text-yellow-600 font-semibold uppercase text-sm transition duration-200 bg-yellow-200 p-4 rounded-lg hover:bg-yellow-300"
+            >
+              <FaMoneyBill className="text-xl" />
+              <span className="ml-3">CashFlow Statement</span>
             </Link>
+          </li>
+          <li>
             <Link
               to="historical-dividend"
-              className="flex md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+              className="flex items-center text-yellow-800 hover:text-yellow-600 font-semibold uppercase text-sm transition duration-200 bg-yellow-200 p-4 rounded-lg hover:bg-yellow-300"
             >
-              <SlGraph />
-              <h6 className="ml-3">Historical Dividend</h6>
+              <SlGraph className="text-xl" />
+              <span className="ml-3">Historical Dividend</span>
             </Link>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
   )

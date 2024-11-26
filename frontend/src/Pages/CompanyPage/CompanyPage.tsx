@@ -25,7 +25,7 @@ const CompanyPage = (props: Props) => {
   return ( 
     <>
     {company ? (
-      <div className="w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
+      <div className="bg-bg-gradient-to-r from-yellow-100 to-yellow-200 w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
         <Sidebar />
         <CompanyDashboard ticker={ticker!}>
           <Tile title="Company Name" info={company.companyName}></Tile> {/* add more tiles later or remove some idk to change metrics */}
