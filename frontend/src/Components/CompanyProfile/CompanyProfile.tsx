@@ -5,7 +5,6 @@ import { useEffect, useState } from "react" // React hooks for managing state an
 import { getKeyMetrics } from "../../api" // Function to fetch company key metrics from an API.
 import RatioList from "../RatioList/RatioList" // Component to render a list of ratios.
 import Spinner from "../Spinner/Spinner"
-import Navbar from "../Navbar/Navbar"
 
 // Define the props interface (empty for now, but keeps the structure consistent for potential future props)
 interface Props {}
