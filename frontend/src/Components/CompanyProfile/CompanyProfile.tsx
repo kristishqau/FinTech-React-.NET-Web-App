@@ -1,15 +1,13 @@
-import { useOutletContext } from "react-router" // Hook to access context provided by React Router.
-import { CompanyKeyMetrics } from "../../company" // Importing a type or interface for company metrics.
-import { formatLargeNonMonetaryNumber, formatRatio } from "../../Helpers/NumberFormatting" // Utility functions for formatting numbers.
-import { useEffect, useState } from "react" // React hooks for managing state and side effects.
-import { getKeyMetrics } from "../../api" // Function to fetch company key metrics from an API.
-import RatioList from "../RatioList/RatioList" // Component to render a list of ratios.
+import { useOutletContext } from "react-router"
+import { CompanyKeyMetrics } from "../../company"
+import { formatLargeNonMonetaryNumber, formatRatio } from "../../Helpers/NumberFormatting"
+import { useEffect, useState } from "react"
+import { getKeyMetrics } from "../../api"
+import RatioList from "../RatioList/RatioList"
 import Spinner from "../Spinner/Spinner"
 
-// Define the props interface (empty for now, but keeps the structure consistent for potential future props)
 interface Props {}
 
-// Define a configuration array for displaying company metrics in a table
 const tableConfig = [
   {
     label: "Market Cap", // Label for the metric
@@ -78,22 +76,20 @@ const tableConfig = [
   }
 ]
 
-// Main component for displaying the company profile
 const CompanyProfile = (props: Props) => {
   const ticker = useOutletContext<string>() // Get the ticker symbol from React Router context.
   const [companyData, setCompanyData] = useState<CompanyKeyMetrics>() // State to store the fetched company data.
   // Fetch the company metrics when the component mounts
   useEffect(() => {
     const getCompanyKeyMetrics = async () => {
-      const value = await getKeyMetrics(ticker) // Fetch the data using the API function.
-      setCompanyData(value?.data[0]) // Set the first company in the response to the state.
+      const value = await getKeyMetrics(ticker)
+      setCompanyData(value?.data[0])
     }
-    getCompanyKeyMetrics() // Call the function.
+    getCompanyKeyMetrics()
   }, []) // Empty dependency array ensures this runs only once, on component mount.
-  // Render the component
   return (
     <>
-      {companyData ? ( // If company data is available, render the RatioList.
+      {companyData ? (
         <>
           <RatioList data={companyData} config={tableConfig} />
         </>

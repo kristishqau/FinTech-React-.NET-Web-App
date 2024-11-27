@@ -1,16 +1,13 @@
 import axios from "axios"
 import { CompanyBalanceSheet, CompanyCashFlow, CompanyHistoricalDividend, CompanyIncomeStatement, CompanyKeyMetrics, CompanyProfile, CompanySearch, CompanyTenK } from "./company"
 
-// Define the response structure expected from the 'search' API
 interface SearchResponse {
-  data: CompanySearch[] // Array of company search results wrapped in a property
+  data: CompanySearch[]
 }
-// Handle errors and log them to the console for debugging
-// Centralized constants for API base URL and API key to avoid repetition and manage easier updates
+
 const BASE_URL = "https://financialmodelingprep.com/api/v3"
 const API_KEY = process.env.REACT_APP_API_KEY
 
-// Function to search companies based on the provided query string
 export const searchCompanies = async (query: string) => {
   try {
     // Axios performs an HTTP GET request, returning a promise.
@@ -18,15 +15,12 @@ export const searchCompanies = async (query: string) => {
     const response = await axios.get<SearchResponse>(
       `${BASE_URL}/search?query=${query}&limit=10&exchange=NASDAQ&apikey=${API_KEY}`
     )
-    // Return the full response object, which contains various properties (headers, data, etc.)
     return response
   } catch (error) {
-    // If an error is thrown during the request, check whether it's a specific Axios error
     if (axios.isAxiosError(error)) {
-      console.error("Axios error while fetching company search: ", error.message) // Log the error for debugging
-      return error.message // Return the error message so it can be displayed in the UI or handled in further logic
+      console.error("Axios error while fetching company search: ", error.message)
+      return error.message
     }
-    // Handle unexpected errors (e.g., a non-Axios-related issue)
     console.error("Unexpected error during company search: ", error)
     return "An unexpected error occurred during the company search."
   }

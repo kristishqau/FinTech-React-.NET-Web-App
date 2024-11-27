@@ -28,7 +28,7 @@ const CompanyPage = (props: Props) => {
       <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 w-full relative flex overflow-x-hidden">
         <Sidebar />
         <CompanyDashboard ticker={ticker!}>
-          <Tile title="Company" info={company.companyName}></Tile> {/* add more tiles later or remove some idk to change metrics */}
+          <Tile title="Company" info={company.companyName}></Tile>
           <Tile title="Price" info={`$${company.price?.toString() || "N/A"}`} />
           <Tile title="DCF" info={`$${company.dcf?.toString() || "N/A"}`} />
           <Tile title="Sector" info={company.sector}></Tile>

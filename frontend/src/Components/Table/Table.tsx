@@ -1,6 +1,6 @@
 interface Props {
-  config: any;
-  data: any;
+  config: any
+  data: any
 }
 
 const Table = ({ config, data }: Props) => {
@@ -15,11 +15,11 @@ const Table = ({ config, data }: Props) => {
             >
               {val.render(company)}
             </td>
-          );
+          )
         })}
       </tr>
-    );
-  });
+    )
+  })
 
   const renderedHeaders = config.map((config: any) => {
     return (
@@ -29,12 +29,11 @@ const Table = ({ config, data }: Props) => {
       >
         {config.label}
       </th>
-    );
-  });
+    )
+  })
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-4xl mx-auto h-full flex flex-col">
-      {/* Scrollable Table Container */}
       <div className="overflow-x-auto w-full">
         <table className="min-w-full table-auto">
           <thead>
@@ -44,7 +43,7 @@ const Table = ({ config, data }: Props) => {
         </table>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Table;
+export default Table

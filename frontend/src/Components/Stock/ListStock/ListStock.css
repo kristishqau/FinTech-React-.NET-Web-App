@@ -1,8 +1,7 @@
-/* Root styling for the stock section */
 .stock-section {
 width: 100%;
-padding-bottom: 1.5rem; /* Clean white background */
-color: #333; /* Darker text for better readability */
+padding-bottom: 1.5rem;
+color: #333;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -10,7 +9,6 @@ justify-content: center;
 border-bottom: 4px solid #ffcc00;
 }
 
-/* Title styling */
 .stock-title {
 margin-bottom: 0.75rem;
 margin-top: 0.75rem;
@@ -25,7 +23,6 @@ letter-spacing: 2px;
 animation: pulse 2s infinite;
 }
 
-/* Pulse animation for the title */
 @keyframes pulse {
 0%, 100% {
     transform: scale(1);
@@ -35,7 +32,6 @@ animation: pulse 2s infinite;
 }
 }
 
-/* Container styling for stock items */
 .stock-container {
 position: relative;
 display: flex;
@@ -47,7 +43,6 @@ margin: 0 auto;
 padding: 1.5rem;
 gap: 2rem;
 
-/* Adjustments for larger screens */
 @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -56,31 +51,27 @@ gap: 2rem;
 }
 }
 
-/* Styling for empty stock message */
 .stock-empty-message {
 margin-bottom: 1rem;
 margin-top: 1rem;
 font-size: 1.5rem;
 font-weight: 600;
 text-align: center;
-color: #333; /* Dark text for readability */
+color: #333;
 padding: 1.5rem 2rem;
 border-radius: 10px;
-background-color: #ffcc00; /* Vibrant yellow background */
-box-shadow: 0 0 5px rgba(255, 204, 0, 0.3); /* Light glow for depth */
+background-color: #ffcc00;
+box-shadow: 0 0 5px rgba(255, 204, 0, 0.3);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* Add animation for entry */
 animation: fadeIn 1s ease-in-out;
 }
 
-/* Hover effect for the empty message */
 .stock-empty-message:hover {
-transform: scale(1.03); /* Subtle scaling effect */
-box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Slight glow for focus */
+transform: scale(1.03);
+box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
 from {
     opacity: 0;
@@ -92,24 +83,21 @@ to {
 }
 }
 
-/* General card styling for stock items */
 .stock-card {
-background: #ffcc00; /* Yellow background for stock items */
-border: 2px solid #333; /* Darker border for contrast */
+background: #ffcc00;
+border: 2px solid #333;
 border-radius: 12px;
 padding: 1rem;
-color: #333; /* Dark text for readability */
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+color: #333;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* Add hover effects for cards */
 &:hover {
     transform: scale(1.03);
     box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 }
 
-/* Title and empty message adjustments for spacing */
 .stock-title,
 .stock-empty-message {
 max-width: 80%;

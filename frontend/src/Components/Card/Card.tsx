@@ -2,9 +2,8 @@ import React, { SyntheticEvent } from 'react'
 import "./Card.css"
 import { CompanySearch } from '../../company'
 import AddStock from '../Stock/AddStock/AddStock'
-import { Link } from 'react-router-dom' // Importing Link component for navigation
+import { Link } from 'react-router-dom'
 
-// Defining the props type for the Card component
 interface Props {
   id: string // Unique identifier for the card
   searchResult: CompanySearch // Company search result, containing details about the company
@@ -41,4 +40,4 @@ const Card: React.FC<Props> = ({ id, searchResult, onStockCreate }: Props): JSX.
   )
 }
 
-export default Card // Exporting the Card component for use in other parts of the app
+export default Card
