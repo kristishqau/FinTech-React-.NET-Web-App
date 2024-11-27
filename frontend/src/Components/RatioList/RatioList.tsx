@@ -10,7 +10,7 @@ interface Props {
           <div className="flex items-center justify-between">
             {/* Label and Info Section */}
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-gray-800 truncate">
+              <p className="text-sm font-semibold text-yellow-800 truncate">
                 {row.label}
               </p>
               {row.info && (
@@ -31,7 +31,7 @@ interface Props {
     return (
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-4xl mx-auto h-full flex flex-col">
         {/* Render the list of rows */}
-        <ul className="flex-1 overflow-y-auto divide-y divide-gray-200">{renderedCells}</ul>
+        <ul className="flex-1 overflow-y-auto divide-y divide-yellow-200">{renderedCells}</ul>
       </div>
     )
   }

@@ -5,7 +5,7 @@ import { FaTableCells } from "react-icons/fa6"
 
 const Sidebar = () => {
   return (
-    <nav className="fixed top-24 bottom-0 left-0 w-64 bg-gradient-to-r from-yellow-100 to-yellow-200 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform translate-x-0 md:translate-x-0 overflow-y-auto z-10">
+    <nav className="fixed top-24 bottom-0 left-0 w-64 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform translate-x-0 md:translate-x-0 overflow-y-auto z-10">
       <div className="px-4 py-6">
         <ul className="space-y-12">
           <li>

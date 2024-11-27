@@ -53,7 +53,6 @@ const Navbar = (props: Props) => {
             className="px-6 py-3 font-bold rounded text-white bg-yellow-400 hover:bg-yellow-500 transition duration-200"
           >
             Signup
-            {/* Signup button with some padding, font weight, and rounded corners. The background color is yellow */}
           </a>
         </div>
       </div>

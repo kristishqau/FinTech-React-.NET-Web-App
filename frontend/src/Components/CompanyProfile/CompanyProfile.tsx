@@ -104,4 +104,4 @@ const CompanyProfile = (props: Props) => {
   )
 }
 
-export default CompanyProfile // Export the component for use in other parts of the app.
+export default CompanyProfile
