@@ -68,7 +68,6 @@ background-color: #e6b800;
 transform: scale(0.95);
 }
 
-/* Form container on larger screens */
 @media (min-width: 768px) {
     .search-form {
         flex-direction: row;

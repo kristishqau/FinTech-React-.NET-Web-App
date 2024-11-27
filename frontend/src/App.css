@@ -1,4 +1,3 @@
-/* General card styling */
 .card {
   width: 350px;
   height: 450px;
@@ -9,55 +8,50 @@
   padding: 50px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #ffffff; /* White card background for clean look */
+  background-color: #ffffff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
-              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; /* Subtle shadow for depth */
-  transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Slight scale-up on hover */
+  transform: scale(1.05);
   box-shadow: rgba(50, 50, 93, 0.4) 0px 8px 15px -2px, 
-              rgba(0, 0, 0, 0.4) 0px 4px 10px -3px; /* Enhanced shadow on hover */
+              rgba(0, 0, 0, 0.4) 0px 4px 10px -3px;
 }
 
-/* Image styling */
 .card img {
   width: 180px;
   height: 180px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%;
   margin: 5px;
-  border: 3px solid #ffcc00; /* Raiffeisen yellow border for emphasis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for image pop-out effect */
+  border: 3px solid #ffcc00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Details section inside card */
 .card .details {
   margin: 10px;
 }
 
-/* Heading in card details */
 .card .details h2 {
   font-weight: 600;
-  color: #333333; /* Dark gray for readability */
+  color: #333333;
 }
 
-/* Paragraph text in card details */
 .card .details p {
   text-transform: uppercase;
   font-weight: 300;
-  color: #ffcc00; /* Raiffeisen yellow for matching theme */
+  color: #ffcc00;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .card {
-    width: 100%; /* Adjust width for smaller screens */
+    width: 100%; 
     padding: 30px;
   }
 
   .card img {
-    width: 150px; /* Slightly smaller image for better fit */
+    width: 150px;
     height: 150px;
   }
 }

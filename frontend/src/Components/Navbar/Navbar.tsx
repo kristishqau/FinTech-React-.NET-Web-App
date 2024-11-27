@@ -35,14 +35,11 @@ const Navbar = (props: Props) => {
         showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
-      {/* The main navigation container */}
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Left section of the navigation, containing the logo and the 'Search' link */}
         <div className="flex items-center space-x-6">
           <Link to="/">
-            {/* Link to the homepage */}
             <img src={logo} alt="FinTech Logo" className="h-12 w-auto" />
-            {/* Logo image with defined size */}
           </Link>
         </div>
         {/* Right section of the navigation, containing 'Login' and 'Signup' */}

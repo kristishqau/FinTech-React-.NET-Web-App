@@ -1,9 +1,8 @@
-import React, { SyntheticEvent } from 'react' // Importing React and necessary hooks
-import Card from '../Card/Card' // Importing the Card component for displaying individual company info
-import { CompanySearch } from '../../company' // Importing the CompanySearch type to define prop structure
+import React, { SyntheticEvent } from 'react'
+import Card from '../Card/Card'
+import { CompanySearch } from '../../company'
 import { v4 as uuidv4 } from 'uuid' // Importing uuidv4 to generate unique IDs for each card
 
-// Define the Props type that the component accepts
 interface Props {
   searchResults: CompanySearch[] // Array of company search results
   onStockCreate: (e: SyntheticEvent) => void // Function to handle stock creation

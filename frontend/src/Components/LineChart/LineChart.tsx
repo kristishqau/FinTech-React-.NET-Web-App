@@ -28,29 +28,26 @@ const SimpleLineChart = ({ data, xAxis, dataKey }: Props) => {
       >
         {/* Grid Lines */}
         <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
-        
         {/* Line */}
         <Line
           type="monotone"
           dataKey={dataKey}
-          stroke="#f59e0b" // vibrant yellow/orange color
-          strokeWidth={3} // Increased stroke width for better visibility
-          activeDot={{ r: 8, fill: '#f59e0b' }} // Larger active dot with matching color
+          stroke="#f59e0b"
+          strokeWidth={3}
+          activeDot={{ r: 8, fill: '#f59e0b' }}
         />
-        
         {/* Tooltips */}
         <Tooltip 
           contentStyle={{
-            backgroundColor: '#f9fafb', // Light background for tooltips
+            backgroundColor: '#f9fafb',
             borderRadius: '8px',
             border: '1px solid #e5e7eb',
           }}
           labelStyle={{
-            color: '#f59e0b', // Label color for better contrast
+            color: '#f59e0b',
             fontWeight: 'bold',
           }}
         />
-
         {/* X and Y Axis */}
         <XAxis
           dataKey={xAxis}
