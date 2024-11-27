@@ -25,15 +25,15 @@ const CompanyPage = (props: Props) => {
   return ( 
     <>
     {company ? (
-      <div className="bg-bg-gradient-to-r from-yellow-100 to-yellow-200 w-full relative flex ct-docs-disable-sidebar-content overflow-x-hidden">
+      <div className="bg-gradient-to-r from-yellow-100 to-yellow-200 w-full relative flex overflow-x-hidden">
         <Sidebar />
         <CompanyDashboard ticker={ticker!}>
-          <Tile title="Company Name" info={company.companyName}></Tile> {/* add more tiles later or remove some idk to change metrics */}
+          <Tile title="Company" info={company.companyName}></Tile> {/* add more tiles later or remove some idk to change metrics */}
           <Tile title="Price" info={`$${company.price?.toString() || "N/A"}`} />
           <Tile title="DCF" info={`$${company.dcf?.toString() || "N/A"}`} />
           <Tile title="Sector" info={company.sector}></Tile>
           <TenKFinder ticker={company.symbol}></TenKFinder>
-          <p className="bg-white shadow rounded text-medium font-medium text-gray-900 p-3 mt-1 m-4">
+          <p className="bg-white shadow rounded text-medium font-medium text-yellow-900 p-3 mt-1 m-4">
             {company.description}
           </p>
         </CompanyDashboard>

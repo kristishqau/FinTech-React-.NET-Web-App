@@ -5,7 +5,6 @@ import SearchPage from "../Pages/SearchPage/SearchPage"
 import CompanyPage from "../Pages/CompanyPage/CompanyPage"
 import CompanyProfile from "../Components/CompanyProfile/CompanyProfile"
 import IncomeStatement from "../Components/IncomeStatement/IncomeStatement"
-import DesignGuidePage from "../Pages/DesignGuidePage/DesignGuidePage"
 import BalanceSheet from "../Components/BalanceSheet/BalanceSheet"
 import CashFlowStatement from "../Components/CashFlowStatement/CashFlowStatement"
 import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend"
@@ -23,10 +22,6 @@ export const router = createBrowserRouter([
             {
                 path: "search", // Matches "/search"
                 element: <SearchPage /> // Renders SearchPage
-            },
-            {
-                path: "design-guide", // Matches "/design-guide"
-                element: <DesignGuidePage /> // Renders DesignGuidePage
             },
             {
                 // Dynamic route for company details

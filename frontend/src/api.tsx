@@ -8,7 +8,7 @@ interface SearchResponse {
 // Handle errors and log them to the console for debugging
 // Centralized constants for API base URL and API key to avoid repetition and manage easier updates
 const BASE_URL = "https://financialmodelingprep.com/api/v3"
-const API_KEY = process.env.API_KEY
+const API_KEY = process.env.REACT_APP_API_KEY
 
 // Function to search companies based on the provided query string
 export const searchCompanies = async (query: string) => {
