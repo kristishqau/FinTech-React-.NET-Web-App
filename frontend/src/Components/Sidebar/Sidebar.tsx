@@ -15,7 +15,7 @@ const Sidebar = () => {
     <>
       {/* Hamburger Button */}
       <button
-        className="fixed top-6 left-4 z-20 p-2 bg-yellow-500 text-white rounded-md md:hidden"
+        className="fixed top-24 left-8 z-20 p-2 bg-yellow-500 text-white rounded-md md:hidden"
         onClick={toggleSidebar}
       >
         <div className="space-y-1">
