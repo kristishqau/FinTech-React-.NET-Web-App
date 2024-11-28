@@ -12,7 +12,9 @@ const SearchPage = (props: Props) => {
   const [stockValues, setStockValues] = useState<string[]>([])
   const [searchResult, setSearchResult] = useState<CompanySearch[]>([])
   const [serverError, setServerError] = useState<string>("")
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {}
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value)
+  }
   const onStockCreate = (e: any) => {
     e.preventDefault()
     const exists = stockValues.find((value) => value === e.target[0].value)
