@@ -52,7 +52,7 @@ Before running the project, ensure that you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kristishqau/FinTech-Project-React-.NET.git
+   git clone https://github.com/kristishqau/FinTech-React-.NET-Web-App.git
    cd frontend
 
 2. Install dependencies:
