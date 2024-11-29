@@ -86,14 +86,10 @@ const BalanceSheet = (props: Props) => {
         }
         getCompanyData()
     }, [])
-    return (
-        <>
-        {companyData ? (
-            <RatioList config={config} data={companyData} />
-        ) : ( 
-            <Spinner />
-        )}
-        </>
+    return companyData ? (
+        <RatioList config={config} data={companyData} />
+    ) : ( 
+        <Spinner />
     )
 }
 

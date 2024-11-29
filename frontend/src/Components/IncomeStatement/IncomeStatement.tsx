@@ -76,8 +76,7 @@ const configs = [
 
 const IncomeStatement = (props: Props) => {
   const ticker = useOutletContext<string>()
-  const [incomeStatement, setIncomeStatement] =
-    useState<CompanyIncomeStatement[]>()
+  const [incomeStatement, setIncomeStatement] = useState<CompanyIncomeStatement[]>()
   useEffect(() => {
     const getRatios = async () => {
       const result = await getIncomeStatement(ticker!)
@@ -85,14 +84,10 @@ const IncomeStatement = (props: Props) => {
     }
     getRatios()
   }, [])
-  return (
-    <>
-      {incomeStatement ? (
-        <Table config={configs} data={incomeStatement} />
-      ) : (
-        <Spinner />
-      )}
-    </>
+  return incomeStatement ? (
+    <Table config={configs} data={incomeStatement} />
+  ) : (
+    <Spinner />
   )
 }
 

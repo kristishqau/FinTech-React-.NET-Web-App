@@ -24,14 +24,10 @@ const HistoricalDividend = (props: Props) => {
     }
     fetchHistoricalDividend()
   }, [])
-  return (
-    <>
-      {dividend && dividend.length > 0 && dividend !== undefined ? (
-        <LineChart data={dividend} xAxis="label" dataKey="dividend" />
-      ) : (
-        <Spinner />
-      )}
-    </>
+  return dividend && dividend.length > 0 && dividend !== undefined ? (
+    <LineChart data={dividend} xAxis="label" dataKey="dividend" />
+  ) : (
+    <Spinner />
   )
 }
 

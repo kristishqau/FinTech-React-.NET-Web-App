@@ -87,16 +87,10 @@ const CompanyProfile = (props: Props) => {
     }
     getCompanyKeyMetrics()
   }, []) // Empty dependency array ensures this runs only once, on component mount.
-  return (
-    <>
-      {companyData ? (
-        <>
-          <RatioList data={companyData} config={tableConfig} />
-        </>
-      ) : ( 
-        <Spinner />
-      )}
-    </>
+  return companyData ? (
+      <RatioList data={companyData} config={tableConfig} />
+  ) : ( 
+    <Spinner />
   )
 }
 

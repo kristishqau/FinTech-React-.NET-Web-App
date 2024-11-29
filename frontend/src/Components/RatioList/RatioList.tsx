@@ -27,7 +27,7 @@ interface Props {
     })
   
     return (
-      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-4xl mx-auto h-full flex flex-col">
+      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full mx-auto h-full flex flex-col">
         <ul className="flex-1 overflow-y-auto divide-y divide-yellow-200">{renderedCells}</ul>
       </div>
     )
