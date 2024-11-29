@@ -16,19 +16,19 @@ This part of the project was bootstrapped with [Create React App](https://github
 
 Here's an overview of the project folder structure:
 
-.
-├── node_modules/           # Installed dependencies
-├── public/                 # Public assets
-├── src/                    # Source code
-│   ├── components/         # Reusable components (Navbar, Sidebar, etc.)
-│   ├── pages/              # Main application pages
-│   ├── helpers/              # Utility functions
-│   ├── App.tsx             # Main application entry
-│   ├── index.tsx           # Application rendering
-│   └── styles/             # Tailwind CSS configurations
-├── .env                    # Environment variables where API Key is found
-├── package.json            # Project dependencies and scripts
-├── tailwind.config.js      # Tailwind CSS configuration
+.\
+├── node_modules/           # Installed dependencies\
+├── public/                 # Public assets\
+├── src/                    # Source code\
+│   ├── components/         # Reusable components (Navbar, Sidebar, etc.)\
+│   ├── pages/              # Main application pages\
+│   ├── helpers/              # Utility functions\
+│   ├── App.tsx             # Main application entry\
+│   ├── index.tsx           # Application rendering\
+│   └── styles/             # Tailwind CSS configurations\
+├── .env                    # Environment variables where API Key is found\
+├── package.json            # Project dependencies and scripts\
+├── tailwind.config.js      # Tailwind CSS configuration\
 └── tsconfig.json           # TypeScript configuration
 
 ## Technologies Used
@@ -82,7 +82,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
