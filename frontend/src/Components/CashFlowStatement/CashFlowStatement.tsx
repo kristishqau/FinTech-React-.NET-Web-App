@@ -63,7 +63,7 @@ const CashflowStatement = (props: Props) => {
     getRatios()
   }, [])
   return cashFlowData ? (
-    <Table config={config} data={cashFlowData}></Table>
+    <Table config={config} data={cashFlowData} />
   ) : (
     <Spinner />
   )
