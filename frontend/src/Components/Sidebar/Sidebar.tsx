@@ -6,16 +6,14 @@ import { useState } from "react"
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
-
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
-
   return (
     <>
       {/* Hamburger Button */}
       <button
-        className="fixed top-24 left-8 z-20 p-2 bg-yellow-500 text-white rounded-md md:hidden"
+        className="fixed top-6 left-6 z-20 p-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
         onClick={toggleSidebar}
       >
         <div className="space-y-1">
@@ -26,9 +24,9 @@ const Sidebar = () => {
       </button>
       {/* Sidebar */}
       <nav
-        className={`fixed top-1 bottom-0 left-0 w-64 bg-yellow flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform ${
+        className={`fixed top-0 bottom-0 left-0 w-64 bg-yellow flex flex-col justify-center items-center transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 z-20`}
+        } z-20`}
       >
         <div className="px-4 py-6">
           <ul className="space-y-12">
@@ -80,10 +78,10 @@ const Sidebar = () => {
           </ul>
         </div>
       </nav>
-      {/* Overlay */}
+      {/* Overlay when sidebar is open */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-10"
           onClick={toggleSidebar}
         ></div>
       )}
