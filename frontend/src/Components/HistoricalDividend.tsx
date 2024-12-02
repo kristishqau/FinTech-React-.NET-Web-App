@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { useOutletContext } from "react-router-dom"
-import { Dividend } from "../../company"
-import LineChart from "../LineChart/LineChart"
-import { getHistoricalDividend } from "../../api"
-import Spinner from "../Spinner/Spinner"
+import { Dividend } from "../company"
+import LineChart from "./LineChart"
+import { getHistoricalDividend } from "../api"
+import Spinner from "./Spinner/Spinner"
 
 type Props = {}
 

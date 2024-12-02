@@ -1,9 +1,9 @@
-import finance from "./finance.png"
+import home from "./homePicture.png"
 import { Link } from 'react-router-dom'
 
-const Finance = () => {
+const Home = () => {
   return (
-    <section id="finance" className="bg-gradient-to-r from-yellow-100 to-yellow-200 min-h-screen flex items-center py-20">
+    <section id="home" className="bg-gradient-to-r from-yellow-100 to-yellow-200 min-h-screen flex items-center py-20">
       {/* Main container for the component, structured flexibly for responsiveness */}
       <div className="container mx-auto px-6 lg:px-16 flex flex-col-reverse lg:flex-row items-center space-y-10 lg:space-y-0">
         {/* Left section: Contains text content */}
@@ -28,11 +28,11 @@ const Finance = () => {
         </div>
         {/* Right section: Contains the image */}
         <div className="mx-auto w-full max-w-xs md:w-96 lg:w-1/2 pt-8 lg:pt-16">
-          <img src={finance} alt="Illustration representing financial data" className="w-full h-auto " />
+          <img src={home} alt="Illustration representing financial data" className="w-full h-auto " />
         </div>
       </div>
     </section>
   )
 }
 
-export default Finance
+export default Home

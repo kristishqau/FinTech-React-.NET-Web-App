@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { formatLargeMonetaryNumber } from '../../Helpers/NumberFormatting'
-import { CompanyBalanceSheet } from '../../company'
-import { getBalanceSheet } from '../../api'
+import { formatLargeMonetaryNumber } from '../Helpers/NumberFormatting'
+import { CompanyBalanceSheet } from '../company'
+import { getBalanceSheet } from '../api'
 import { useOutletContext } from 'react-router-dom'
-import RatioList from '../RatioList/RatioList'
-import Spinner from '../Spinner/Spinner'
+import RatioList from './RatioList'
+import Spinner from './Spinner/Spinner'
 
 interface Props {}
 

@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import DeleteStock from '../DeleteStock/DeleteStock' 
+import DeleteStock from './DeleteStock' 
 import { Link } from 'react-router-dom' 
 
 interface Props {

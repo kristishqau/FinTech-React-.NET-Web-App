@@ -1,10 +1,10 @@
 import { useOutletContext } from "react-router-dom"
-import { getCashFlow } from "../../api"
-import Table from "../Table/Table"
+import { getCashFlow } from "../api"
+import Table from "./Table"
 import { useEffect, useState } from "react"
-import { CompanyCashFlow } from "../../company"
-import { formatLargeMonetaryNumber } from "../../Helpers/NumberFormatting"
-import Spinner from "../Spinner/Spinner"
+import { CompanyCashFlow } from "../company"
+import { formatLargeMonetaryNumber } from "../Helpers/NumberFormatting"
+import Spinner from "./Spinner/Spinner"
 
 type Props = {}
 

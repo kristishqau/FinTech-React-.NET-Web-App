@@ -1,13 +1,13 @@
 import { createBrowserRouter, Navigate } from "react-router-dom"
 import App from "../App"
-import HomePage from "../Pages/HomePage/HomePage"
-import SearchPage from "../Pages/SearchPage/SearchPage"
-import CompanyPage from "../Pages/CompanyPage/CompanyPage"
-import CompanyProfile from "../Components/CompanyProfile/CompanyProfile"
-import IncomeStatement from "../Components/IncomeStatement/IncomeStatement"
-import BalanceSheet from "../Components/BalanceSheet/BalanceSheet"
-import CashFlowStatement from "../Components/CashFlowStatement/CashFlowStatement"
-import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend"
+import HomePage from "../Pages/HomePage"
+import SearchPage from "../Pages/SearchPage"
+import CompanyPage from "../Pages/CompanyPage"
+import CompanyProfile from "../Components/CompanyProfile"
+import IncomeStatement from "../Components/IncomeStatement"
+import BalanceSheet from "../Components/BalanceSheet"
+import CashFlowStatement from "../Components/CashFlowStatement"
+import HistoricalDividend from "../Components/HistoricalDividend"
 
 export const router = createBrowserRouter([
     {
