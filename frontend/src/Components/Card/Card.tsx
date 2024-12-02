@@ -1,7 +1,7 @@
 import React, { SyntheticEvent } from 'react'
 import "./Card.css"
 import { CompanySearch } from '../../company'
-import AddStock from '../Stock/AddStock/AddStock'
+import AddStock from '../Stock/AddStock'
 import { Link } from 'react-router-dom'
 
 interface Props {

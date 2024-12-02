@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import CardStock from '../CardStock/CardStock'
+import CardStock from '../CardStock'
 import './ListStock.css'
 
 interface Props {

@@ -1,11 +1,11 @@
-import Finance from '../../Components/Finance/Finance'
+import Home from '../Components/Home/Home'
 
 interface Props {}
 
 const HomePage = (props: Props) => {
   return (
     <div>
-      <Finance />
+      <Home />
     </div>
   )
 }

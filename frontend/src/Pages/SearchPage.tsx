@@ -1,9 +1,9 @@
 import { ChangeEvent, SyntheticEvent, useState } from 'react'
-import { searchCompanies } from '../../api'
-import Search from '../../Components/Search/Search'
-import ListStock from '../../Components/Stock/ListStock/ListStock'
-import CardList from '../../Components/CardList/CardList'
-import { CompanySearch } from '../../company'
+import { searchCompanies } from '../api'
+import Search from '../Components/Search/Search'
+import ListStock from '../Components/Stock/ListStock/ListStock'
+import CardList from '../Components/CardList'
+import { CompanySearch } from '../company'
 
 interface Props {}
 

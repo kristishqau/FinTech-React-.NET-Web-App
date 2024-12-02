@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import { getIncomeStatement } from "../../api"
-import { CompanyIncomeStatement } from "../../company"
-import { formatLargeMonetaryNumber, formatRatio } from "../../Helpers/NumberFormatting"
+import { getIncomeStatement } from "../api"
+import { CompanyIncomeStatement } from "../company"
+import { formatLargeMonetaryNumber, formatRatio } from "../Helpers/NumberFormatting"
 import { useOutletContext } from "react-router-dom"
-import Table from "../Table/Table"
-import Spinner from "../Spinner/Spinner"
+import Table from "./Table"
+import Spinner from "./Spinner/Spinner"
 
 interface Props {}
 

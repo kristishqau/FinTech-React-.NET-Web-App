@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { CompanyTenK } from '../../company'
 import { getTenK } from '../../api'
 import Spinner from '../Spinner/Spinner'
-import TenKFinderItem from './TenKFinderItem/TenKFinderItem'
+import TenKFinderItem from './TenKFinderItem'
 
 interface Props {
   ticker: string
