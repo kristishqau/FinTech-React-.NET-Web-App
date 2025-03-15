@@ -91,15 +91,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-## How to Use
-
-1. **Navigate the App**:
-    * Use the sidebar to access different sections like **Company Profile**, **Income Statement**, **Cash Flow Statement**, and **Historical Dividend**.
-    * Search functionality is available in the top navbar.
-
-2. **Responsive Design**:
-    * The layout adjusts seamlessly for both desktop and mobile views. Hamburger menus provide easy access to navigation options on smaller screens.
-
-3. **View Financial Data**:
-    * Explore detailed tables and charts to analyze financial statements.
