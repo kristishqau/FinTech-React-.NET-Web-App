@@ -1,21 +1,41 @@
 # FinTech Dashboard
 
-FinTech Dashboard is a modern, responsive web application designed for exploring and analyzing financial data. It provides users with real-time insights into company profiles, income statements, balance sheets, cash flow statements, and historical dividends. The application features interactive charts, dynamic data rendering, and seamless navigation for a smooth user experience.
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Installation and Setup](#installation-and-setup)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [License](#license)
+
+---
+
+## Overview
+FinTech Dashboard is a financial analytics platform that empowers users to uncover deep insights from complex financial data. With a fully responsive design, this application delivers seamless navigation and dynamic visualizations, enabling you to review detailed company profiles, comprehensive income statements, balance sheets, cash flow reports, and historical dividend trends. Whether you're an investor, analyst, or financial enthusiast, FinTech Dashboard transforms raw data into actionable intelligence through its intuitive interface and interactive charts.
+
+The project is divided into two main components, each with its own detailed README outlining setup instructions, functionality, and usage: 
+- **Frontend:** Built with React, TypeScript, and Tailwind CSS, providing a clean and interactive UI.
+- **Backend:** Developed using .NET Web API to handle financial data retrieval and business logic.
+
+---
 
 ## Features
-
 ### Frontend
-- **Responsive Design**: Optimized for desktop and mobile devices using Tailwind CSS.
-- **Dynamic Data Rendering**: Fetches and displays financial data dynamically.
-- **Interactive Graphs**: Uses Recharts for financial data visualization.
-- **Modern UI/UX**: Clean and intuitive design for easy navigation.
-- **Efficient State Management**: React Hooks for handling state and side effects.
+- Responsive and user-friendly design.
+- Dynamic data rendering with real-time financial updates.
+- Interactive financial charts and visualizations.
+- Efficient state management using React Hooks.
+- Integrated search functionality for company exploration.
 
 ### Backend
-- **RESTful API**: Developed using .NET Web API to serve financial data.
-- **Database Integration**: Manages financial records and user interactions.
-- **Secure API Endpoints**: Implements authentication and request validation.
-- **Scalability**: Built for handling large volumes of financial data efficiently.
+- RESTful API endpoints for financial data retrieval.
+- Secure and efficient handling of API requests.
+- Integration with financial data providers.
+- Optimized for scalability and performance.
+
+---
 
 ## Project Structure
 
@@ -45,28 +65,30 @@ FinTech-Dashboard/
 ## Technologies Used
 
 ### Frontend
-- **React**: JavaScript library for building UI components.
-- **TypeScript**: Adds type safety and enhances code quality.
-- **Tailwind CSS**: Utility-first CSS framework for responsive design.
-- **React Router**: Manages navigation between views.
-- **Recharts**: For interactive data visualizations.
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Router**
+- **Recharts**
+- **Axios**
 
 ### Backend
-- **.NET Web API**: Provides RESTful endpoints for financial data.
-- **Entity Framework Core**: Manages database interactions.
-- **SQL Server / SSMS**: Stores financial and user data.
-- **Authentication & Security**: Protects API endpoints with proper authentication.
+- **.NET Web API**
+- **Entity Framework Core**
+- **SSMS / SQL Server**
+- **Swagger** for API documentation
 
-## Prerequisites
-
-Before running the project, ensure you have installed:
-- **Node.js** (v14 or higher) for the frontend
-- **.NET SDK** (latest version) for the backend
-- **SQL Server/SSMS** for data storage
+---
 
 ## Installation and Setup
 
-### Clone the repository
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (for frontend development)
+- **.NET SDK** (for backend development)
+- **SSMS / SQL Server** (for database management)
+
+### Clone the Repository
 ```sh
 git clone https://github.com/kristishqau/FinTech-React-.NET-Web-App.git
 cd FinTech-React-.NET-Web-App
@@ -88,7 +110,7 @@ dotnet run
 ```
 The backend will be running at `http://localhost:5000` (or `https://localhost:5001` for HTTPS).
 
-## How to Use
+## Usage
 
 1. **Search for Companies**: Use the search bar to find company profiles.
 2. **View Financial Statements**: Navigate through income statements, balance sheets, and cash flow reports.
