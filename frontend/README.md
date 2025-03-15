@@ -22,10 +22,10 @@ Here's an overview of the project folder structure:
 ├── src/                    # Source code\
 │   ├── components/         # Reusable components (Navbar, Sidebar, etc.)\
 │   ├── pages/              # Main application pages\
-│   ├── helpers/              # Utility functions\
+│   ├── helpers/            # Utility functions\
 │   ├── App.tsx             # Main application entry\
 │   ├── index.tsx           # Application rendering\
-│   └── styles/             # Tailwind CSS configurations\
+│   └── hooks/              # Stores Custom Hooks\
 ├── .env                    # Environment variables where API Key is found\
 ├── package.json            # Project dependencies and scripts\
 ├── tailwind.config.js      # Tailwind CSS configuration\
