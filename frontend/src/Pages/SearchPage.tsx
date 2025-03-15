@@ -26,6 +26,7 @@ const SearchPage = () => {
       <ListStock 
         stockValues={stockValues}
         onStockDelete={(e) => {
+          e.preventDefault()
           const target = e.target as HTMLFormElement
           const input = target[0] as HTMLInputElement
           removeStock(input.value)
@@ -35,6 +36,7 @@ const SearchPage = () => {
       <CardList 
         searchResults={response.data || []}
         onStockCreate={(e) => {
+          e.preventDefault()
           const target = e.target as HTMLFormElement 
           const input = target[0] as HTMLInputElement
           addStock(input.value)
