@@ -13,11 +13,16 @@ const CardStock = ({ stockValue, onStockDelete }: Props) => {
     <Link
       to={`/company/${stockValue}/company-profile`}
       className="text-2xl font-bold text-yellow-700 hover:text-yellow-800 transition-colors duration-200"
+      aria-label={`Go to ${stockValue} company profile`}
     >
       {stockValue}
     </Link>
     <div className="absolute top-2 left-2 text-2xl cursor-pointer opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      <DeleteStock stockValue={stockValue} onStockDelete={onStockDelete} />
+      <DeleteStock 
+        stockValue={stockValue} 
+        onStockDelete={onStockDelete} 
+        aria-label={`Delete ${stockValue} from stock`}
+      />
     </div>
   </div>
   )

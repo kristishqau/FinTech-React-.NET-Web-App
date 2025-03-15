@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react"
-import { getIncomeStatement } from "../api"
-import { CompanyIncomeStatement } from "../company"
-import { formatLargeMonetaryNumber, formatRatio } from "../Helpers/NumberFormatting"
 import { useOutletContext } from "react-router-dom"
 import Table from "./Table"
 import Spinner from "./Spinner/Spinner"
+import useIncomeStatement from "../hooks/useIncomeStatement"
+import { formatLargeMonetaryNumber, formatRatio } from "../Helpers/NumberFormatting"
+import { CompanyIncomeStatement } from "../company"
 
 interface Props {}
 
@@ -63,7 +62,7 @@ const configs = [
       formatRatio(company.grossProfitRatio),
   },
   {
-    label: "Opearting Income Ratio",
+    label: "Operating Income Ratio",
     render: (company: CompanyIncomeStatement) =>
       formatRatio(company.operatingIncomeRatio),
   },
@@ -76,18 +75,20 @@ const configs = [
 
 const IncomeStatement = (props: Props) => {
   const ticker = useOutletContext<string>()
-  const [incomeStatement, setIncomeStatement] = useState<CompanyIncomeStatement[]>()
-  useEffect(() => {
-    const getRatios = async () => {
-      const result = await getIncomeStatement(ticker!)
-      setIncomeStatement(result!.data)
-    }
-    getRatios()
-  }, [])
+  const { data: incomeStatement, loading, error } = useIncomeStatement(ticker)
+
+  if (loading) {
+    return <Spinner />
+  }
+
+  if (error) {
+    return <div className="error-message">{error}</div>
+  }
+
   return incomeStatement ? (
     <Table config={configs} data={incomeStatement} />
   ) : (
-    <Spinner />
+    <div>No income statement data available.</div>
   )
 }
 

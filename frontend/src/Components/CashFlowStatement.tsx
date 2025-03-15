@@ -1,10 +1,10 @@
+import React from "react"
 import { useOutletContext } from "react-router-dom"
-import { getCashFlow } from "../api"
 import Table from "./Table"
-import { useEffect, useState } from "react"
+import Spinner from "./Spinner/Spinner"
+import useCashFlow from "../hooks/useCashFlow"
 import { CompanyCashFlow } from "../company"
 import { formatLargeMonetaryNumber } from "../Helpers/NumberFormatting"
-import Spinner from "./Spinner/Spinner"
 
 type Props = {}
 
@@ -49,23 +49,24 @@ const config = [
     label: "Free Cash Flow",
     render: (company: CompanyCashFlow) =>
       formatLargeMonetaryNumber(company.freeCashFlow),
-  }
+  },
 ]
 
-const CashflowStatement = (props: Props) => {
+const CashflowStatement: React.FC<Props> = () => {
   const ticker = useOutletContext<string>()
-  const [cashFlowData, setCashFlowData] = useState<CompanyCashFlow[]>()
-  useEffect(() => {
-    const getRatios = async () => {
-      const result = await getCashFlow(ticker)
-      setCashFlowData(result!.data)
-    }
-    getRatios()
-  }, [])
-  return cashFlowData ? (
+  const { data: cashFlowData, loading, error } = useCashFlow(ticker)
+
+  if (loading) {
+    return <Spinner />
+  }
+  if (error) {
+    return <div className="error-message">{error}</div>
+  }
+
+  return cashFlowData.length > 0 ? (
     <Table config={config} data={cashFlowData} />
   ) : (
-    <Spinner />
+    <div>No cash flow data available.</div>
   )
 }
 

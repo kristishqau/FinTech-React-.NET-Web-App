@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { FC, memo } from 'react'
 import { Outlet } from 'react-router-dom'
 
-interface Props {
-  children: React.ReactNode
+interface CompanyDashboardProps {
   ticker: string
+  children: React.ReactNode
 }
 
-const CompanyDashboard = ({ children, ticker }: Props) => {
+const CompanyDashboard: FC<CompanyDashboardProps> = ({ ticker, children }) => {
   return (
     <div className="relative w-full h-screen flex flex-col py-6 md:py-20">
       <div className="relative pt-16 pb-8 flex-grow">
@@ -23,4 +23,4 @@ const CompanyDashboard = ({ children, ticker }: Props) => {
   )
 }
 
-export default CompanyDashboard
+export default memo(CompanyDashboard)

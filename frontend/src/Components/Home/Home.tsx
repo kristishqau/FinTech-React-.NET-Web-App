@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <section id="home" className="bg-gradient-to-r from-yellow-100 to-yellow-200 min-h-screen flex items-center py-20">
-      {/* Main container for the component, structured flexibly for responsiveness */}
+      {/* Main container with flexible layout */}
       <div className="container mx-auto px-6 lg:px-16 flex flex-col-reverse lg:flex-row items-center space-y-10 lg:space-y-0">
-        {/* Left section: Contains text content */}
+        
+        {/* Left section with text content */}
         <div className="flex flex-col space-y-6 lg:space-y-8 mb-12 lg:mb-0 lg:w-1/2 justify-center items-center lg:items-start">
           <h1 className="text-4xl lg:text-5xl font-extrabold text-center text-yellow-600 lg:text-left leading-tight">
             Revolutionizing the Way You Access Financial Insights
@@ -18,7 +19,7 @@ const Home = () => {
             From the latest quarterly reports to in-depth financial analytics, you get a curated experience that filters the noise, leaving you with what really matters for your financial journey.
           </p>
           <div className="mx-auto lg:mx-0">
-            {/* Navigation button styled as a link */}
+            {/* Navigation button */}
             <Link
               to="/search"
               className="py-4 px-8 text-2xl font-semibold text-white bg-yellow-600 rounded-lg shadow-md hover:bg-yellow-700 transition duration-300 transform hover:scale-105">
@@ -26,9 +27,15 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        {/* Right section: Contains the image */}
+        
+        {/* Right section with image */}
         <div className="mx-auto w-full max-w-xs md:w-96 lg:w-1/2 pt-8 lg:pt-16">
-          <img src={home} alt="Illustration representing financial data" className="w-full h-auto " />
+          <img
+            src={home}
+            alt="Illustration representing financial data"
+            className="w-full h-auto"
+            loading="lazy" 
+          />
         </div>
       </div>
     </section>
