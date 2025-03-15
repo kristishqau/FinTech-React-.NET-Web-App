@@ -1,5 +1,7 @@
 # FinTech Dashboard Frontend
 
+## Overview
+
 FinTech Dashboard Project has a React-based designed frontend to display financial data in a clean, responsive, and user-friendly manner. It allows users to explore company profiles, view financial statements, and analyze key financial ratios with a modern, intuitive interface.
 
 This part of the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
