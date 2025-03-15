@@ -103,15 +103,3 @@ Your app is ready to be deployed!
 
 3. **View Financial Data**:
     * Explore detailed tables and charts to analyze financial statements.
-
-## Contributions
-I welcome contributions! Please follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch:
-   git checkout -b feature-name
-3. Commit changes:
-   git commit -m 'Add feature'
-4. Push to the branch:
-   git push origin feature-name
-5. Submit a pull request.
