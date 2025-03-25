@@ -15,6 +15,5 @@ namespace backend.Models
         public string? Industry { get; set; }
         public long MarketCap { get; set; }
         public List<Comment> Comments { get; set; } = [];
-        public List<Portfolio> Portfolios { get; set; } = [];
     }
 }
