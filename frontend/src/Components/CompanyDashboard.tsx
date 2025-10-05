@@ -8,14 +8,17 @@ interface CompanyDashboardProps {
 
 const CompanyDashboard: FC<CompanyDashboardProps> = ({ ticker, children }) => {
   return (
-    <div className="relative w-full h-screen flex flex-col py-6 md:py-20">
-      <div className="relative pt-16 pb-8 flex-grow">
-        <div className="px-4 md:px-6 mx-auto w-full max-w-screen-xl">
-          <div className="flex flex-wrap">
-            {children}
-          </div>
-          <div className="relative flex-grow px-4 md:px-4 mx-auto w-full">
-            <Outlet context={ticker} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="pt-20 pb-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="animate-fade-in">
+            <div className="mb-8 space-y-6">
+              {children}
+            </div>
+            
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-card p-6 animate-fade-in">
+              <Outlet context={ticker} />
+            </div>
           </div>
         </div>
       </div>

@@ -19,23 +19,40 @@ const Card: React.FC<Props> = ({ id, searchResult, onStockCreate }: Props): JSX.
 
   return (
     <div
-      className="flex flex-col items-center justify-between w-full p-6 bg-yellow-50 rounded-lg shadow-md transform transition-all duration-300 hover:scale-102 hover:shadow-lg hover:bg-yellow-100 md:flex-row md:space-x-6 overflow-hidden"
+      className="group card hover:scale-[1.02] cursor-pointer bg-white/50 backdrop-blur-sm"
       key={id}
       id={id}
     >
-      <Link 
-        to={`/company/${symbol}/company-profile`} 
-        className="font-bold text-center text-yellow-700 hover:text-yellow-800 md:text-left"
-        aria-label={`Go to ${name} company profile`}
-      >
-        {name} ({symbol})
-      </Link>
-      <p className="text-gray-700">{currency}</p>
-      <p className="font-bold text-gray-700">
-        {exchangeShortName} - {stockExchange}
-      </p>
-      
-      {onStockCreate && <AddStock onStockCreate={onStockCreate} symbol={symbol} />}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="flex-grow space-y-2">
+          <Link 
+            to={`/company/${symbol}/company-profile`} 
+            className="block group-hover:text-primary transition-colors duration-200"
+            aria-label={`Go to ${name} company profile`}
+          >
+            <h3 className="text-lg font-semibold">{name}</h3>
+            <p className="text-sm text-gray-600 font-medium">{symbol}</p>
+          </Link>
+          
+          <div className="flex flex-wrap gap-3 mt-2">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+              {currency}
+            </span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+              {exchangeShortName}
+            </span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+              {stockExchange}
+            </span>
+          </div>
+        </div>
+        
+        {onStockCreate && (
+          <div className="flex-shrink-0">
+            <AddStock onStockCreate={onStockCreate} symbol={symbol} />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
