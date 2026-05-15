@@ -13,6 +13,7 @@ namespace backend.Controllers
 {
     [Route("backend/stock")]
     [ApiController]
+    [Authorize]  // Requires valid JWT token
     public class StockController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
